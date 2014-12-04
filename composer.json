@@ -1,0 +1,26 @@
+{
+    "name": "borille/zf1-bootstrap3",
+    "description": "Zend Framework 1 + Twitter Bootstrap 3",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "borille",
+            "email": "bitlascado@gmail.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "library"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/borille/trb-framework"
+        }
+    ],
+    "require": {
+        "zendframework/zendframework1": "1.12.9",
+        "borille/trb-framework": "dev-master",
+        "twitter/bootstrap": "3.*"
+    }
+}
