@@ -2,8 +2,10 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/library/Application/Acl" />
       <excludeFolder url="file://$MODULE_DIR$/library/borille/trb-framework" />
       <excludeFolder url="file://$MODULE_DIR$/library/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/library/easybib/form-decorator" />
       <excludeFolder url="file://$MODULE_DIR$/library/twitter/bootstrap" />
       <excludeFolder url="file://$MODULE_DIR$/library/zendframework/zendframework1" />
     </content>
@@ -26,15 +28,19 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/library/easybib/form-decorator" />
           <root url="file://$MODULE_DIR$/library/zendframework/zendframework1" />
           <root url="file://$MODULE_DIR$/library/twitter/bootstrap" />
           <root url="file://$MODULE_DIR$/library/borille/trb-framework" />
+          <root url="file://$MODULE_DIR$/library/Application/Acl" />
           <root url="file://$MODULE_DIR$/library/composer" />
         </CLASSES>
         <SOURCES>
+          <root url="file://$MODULE_DIR$/library/easybib/form-decorator" />
           <root url="file://$MODULE_DIR$/library/zendframework/zendframework1" />
           <root url="file://$MODULE_DIR$/library/twitter/bootstrap" />
           <root url="file://$MODULE_DIR$/library/borille/trb-framework" />
+          <root url="file://$MODULE_DIR$/library/Application/Acl" />
           <root url="file://$MODULE_DIR$/library/composer" />
         </SOURCES>
       </library>

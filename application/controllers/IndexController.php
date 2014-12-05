@@ -10,7 +10,20 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+        if ( !Zend_Auth::getInstance()->hasIdentity() ) {
+            $auth = new Application_Model_Auth();
+            $auth->setRoleId( 'D' );
+
+            Zend_Auth::getInstance()->getStorage()->write( $auth );
+        }
+
+        $form = new Application_Form_Login();
+
+        if ( $this->getRequest()->isPost() ) {
+            $form->isValid( $this->getRequest()->getPost() );
+        }
+
+        $this->view->form = $form;
     }
 
 
