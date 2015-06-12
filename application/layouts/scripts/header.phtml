@@ -1,15 +1,17 @@
 <?php if ( $this->title || $this->menu ): ?>
-    <h1 class="page-header">
-        <div class='pull-right'>
-            <?php echo $this->menu; ?>
-        </div>
-        <?php if ( $this->title ): ?>
-            <span class="sub-header">
+	<div class="page-header">
+		<h1>
+			<?php if ( $this->title ): ?>
+				<span class="sub-header">
                 <?php echo $this->title; ?>
-                <small><?php echo $this->subtitle; ?></small>
-        </span>
-        <?php else: ?>
-            &nbsp;
-        <?php endif; ?>
-    </h1>
+					<small><?php echo $this->subtitle; ?></small>
+        		</span>
+			<?php else: ?>
+				&nbsp;
+			<?php endif; ?>
+			<div class='pull-right'>
+				<?php echo $this->menu; ?>
+			</div>
+		</h1>
+	</div>
 <?php endif; ?>
