@@ -6,7 +6,8 @@
     Version: 1.3
 */
 (function($) {
-	var pasteEventName = ($.browser.msie ? 'paste' : 'input') + ".mask";
+	//var pasteEventName = ($.browser.msie ? 'paste' : 'input') + ".mask";
+	var pasteEventName = ((/msie|trident/i).test(navigator.userAgent) ? 'paste' : 'input') + ".mask";
 	var iPhone = (window.orientation != undefined);
 
 	$.mask = {
@@ -239,7 +240,7 @@
 							else
 								input.caret(pos);
 						};
-						($.browser.msie ? moveCaret:function(){setTimeout(moveCaret,0)})();
+						((/msie|trident/i).test(navigator.userAgent) ? moveCaret:function(){setTimeout(moveCaret,0)})();
 					})
 					.bind("blur.mask", function() {
 						checkVal();
