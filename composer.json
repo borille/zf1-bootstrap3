@@ -19,8 +19,9 @@
         }
     ],
     "require": {
-        "zendframework/zendframework1": "1.12.9",
+        "zendframework/zendframework1": "1.12.*",
         "borille/trb-framework": "dev-master",
-        "twitter/bootstrap": "3.*"
+        "twitter/bootstrap": "3.*",
+        "FortAwesome/Font-Awesome": "4.*"
     }
 }
