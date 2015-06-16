@@ -1,16 +1,29 @@
 <?php
 $baseUrl = $this->baseUrl();
 
+//load datetimerpicker files
+if ( $this->datetimepicker ) {
+	//css
+	$this->headLink()->prependStylesheet( $baseUrl . '/bootstrap3-datetimepicker/css/bootstrap-datetimepicker.min.css' );
+	//js
+	$this->headScript()->prependFile( $baseUrl . '/bootstrap3-datetimepicker/js/bootstrap-datetimepicker.min.js' );
+	$this->headScript()->prependFile( $baseUrl . '/bootstrap3-datetimepicker/js/collapse.js' );
+	$this->headScript()->prependFile( $baseUrl . '/bootstrap3-datetimepicker/js/transition.js' );
+	$this->headScript()->prependFile( $baseUrl . '/bootstrap3-datetimepicker/js/moment-pt_br.min.js' );
+}
+
 //css
-$this->headLink()->appendStylesheet( $baseUrl . '/bootstrap3/css/bootstrap.min.css' );
-//$this->headLink()->appendStylesheet( $baseUrl . '/bootstrap3/css/docs.min.css' );
-$this->headLink()->appendStylesheet( $baseUrl . '/css/default.css' );
+$this->headLink()->prependStylesheet( $baseUrl . '/css/extra.css' );
+$this->headLink()->prependStylesheet( $baseUrl . '/css/default.css' );
+$this->headLink()->prependStylesheet( $baseUrl . '/css/metronic.css' );
+$this->headLink()->prependStylesheet( $baseUrl . '/font-awesome-4.3.0/css/font-awesome.min.css' );
+$this->headLink()->prependStylesheet( $baseUrl . '/bootstrap3/css/bootstrap.min.css' );
 
 //js
-$this->headScript()->appendFile( "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" );
-$this->headScript()->appendFile( $baseUrl . '/bootstrap3/js/bootstrap.min.js' );
-$this->headScript()->appendFile( $baseUrl . '/js/maskedinput.js' );
-$this->headScript()->appendFile( $baseUrl . '/js/default.js' );
+$this->headScript()->prependFile( $baseUrl . '/js/default.js' );
+$this->headScript()->prependFile( $baseUrl . '/js/maskedinput.js' );
+$this->headScript()->prependFile( $baseUrl . '/bootstrap3/js/bootstrap.min.js' );
+$this->headScript()->prependFile( "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" );
 ?>
 
 <?php echo $this->doctype() ?>
@@ -33,16 +46,19 @@ $this->headScript()->appendFile( $baseUrl . '/js/default.js' );
 <?php echo $this->partial( 'navbar.phtml', array( 'navigation' => $this->navigation ) ); ?>
 
 <!-- BEGIN CONTAINER -->
-<div class="container">
+<div class="container margin-bottom-60">
 	<?php
 	echo $this->partial( 'header.phtml', array(
 		'title' => $this->headerTitle,
 		'subtitle' => $this->headerSubtitle,
 		'menu' => $this->headerMenu
 	) );
-	echo $this->FlashMessenger();
-	echo $this->layout()->content;
 	?>
+	<?php echo $this->FlashMessenger(); ?>
+
+	<!-- BEGIN CONTENT -->
+	<?php echo $this->layout()->content; ?>
+	<!-- END CONTENT -->
 </div>
 <!-- END CONTAINER -->
 
