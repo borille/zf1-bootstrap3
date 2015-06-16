@@ -1,0 +1,55 @@
+<?php if ( $this->pageCount ): ?>
+	<nav class="text-center">
+		<ul class="pagination">
+			<?php if ( isset( $this->previous ) ): ?>
+				<li class="">
+					<a href="<?php echo $this->url( array( 'page' => $this->first ) ); ?>" title="Primeira">
+						<i class="fa fa-step-backward"></i>
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo $this->url( array( 'page' => $this->previous ) ); ?>" title="Anterior">
+						<i class="fa fa-backward"></i>
+					</a>
+				</li>
+			<?php else: ?>
+				<li class="disabled">
+					<a href="#"><i class="fa fa-step-backward"></i></a>
+				</li>
+				<li class="disabled">
+					<a href="#"><i class="fa fa-backward"></i></a>
+				</li>
+			<?php endif; ?>
+			<?php foreach ( $this->pagesInRange as $page ): ?>
+				<?php if ( $page != $this->current ): ?>
+					<li>
+						<a href="<?php echo $this->url( array( 'page' => $page ) ); ?>"><?php echo $page; ?></a>
+					</li>
+				<?php else: ?>
+					<li class="active">
+						<a href="#"><?php echo $page; ?></a>
+					</li>
+				<?php endif; ?>
+			<?php endforeach; ?>
+			<?php if ( isset( $this->next ) ): ?>
+				<li>
+					<a href="<?php echo $this->url( array( 'page' => $this->next ) ); ?>" title="Próxima">
+						<i class="fa fa-forward"></i>
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo $this->url( array( 'page' => $this->last ) ); ?>" title="Última">
+						<i class="fa fa-step-forward"></i>
+					</a>
+				</li>
+			<?php else: ?>
+				<li class="disabled">
+					<a href="#"><i class="fa fa-forward"></i></a>
+				</li>
+				<li class="disabled">
+					<a href="#"><i class="fa fa-step-forward"></i></a>
+				</li>
+			<?php endif; ?>
+		</ul>
+	</nav>
+<?php endif; ?>
