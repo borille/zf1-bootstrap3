@@ -1,5 +1,28 @@
-<footer class="footer">
+<div class="footer">
 	<div class="container">
-		<p class="text-muted">Place sticky footer content here.</p>
+		<div class="row">
+			<!-- BEGIN COPYRIGHT -->
+			<div class="col-md-8 col-sm-8">
+				<p class="text-muted margin-top-10">
+					2015 - ALL Rights Reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+				</p>
+			</div>
+			<!-- END COPYRIGHT -->
+			<!-- BEGIN SUBSCRIBE -->
+			<div class="col-md-4 col-sm-4">
+				<div class="input-group">
+					<input type="text" placeholder="youremail@mail.com" class="form-control">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">
+						<?php echo $this->translate( 'subscribe' ) ?>
+					</button>
+                  </span>
+				</div>
+			</div>
+			<!-- END SUBSCRIBE -->
+		</div>
 	</div>
-</footer>
+</div>
+
+
+
