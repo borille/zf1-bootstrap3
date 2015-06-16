@@ -27,5 +27,16 @@ class Application_Model_Auth implements Zend_Acl_Role_Interface
         return $this;
     }
 
+    /**
+     * Linguagem
+     * 1 => PT
+     * 2 => EN
+     * @return int
+     */
+    public function getLanguage()
+    {
+        return 1;
+    }
+
 }
 
