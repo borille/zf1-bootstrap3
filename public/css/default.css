@@ -62,11 +62,12 @@ body > .container {
 }
 
 .radio label {
-    margin-right: 20px;
+    margin-right: 20px; !important;
 }
 
 .checkbox label {
-    margin-right: 20px;
+    margin-right: 20px; !important;
+    padding-left: 20px; !important;
 }
 
 .form-group > .btn {
