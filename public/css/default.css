@@ -57,30 +57,30 @@ body > .container {
     margin: 0px;
 }
 
+.radio label, .checkbox label {
+    margin-right: 20px; !important;
+}
+
+.checkbox > label, .form-horizontal .checkbox > label {
+    padding-left: 20px;
+}
+
+.form-horizontal .checkbox {
+    padding: 7px 0 0 15px;
+}
+
 .form-group > .checkbox {
     margin: 0px;
 }
 
-.radio label {
-    margin-right: 20px; !important;
+#fieldset-control .btn, .form-group-control .btn {
+    min-width: 120px;
 }
 
-.checkbox label {
-    margin-right: 20px; !important;
-    padding-left: 20px; !important;
-}
-
-.form-group > .btn {
-    min-width: 100px;
-}
-
-#fieldset-control {
-    border-top: 1px solid #e5e5e5;
-}
-
-#fieldset-control .form-group {
-    margin-top: 15px;
+.form-bs-group #fieldset-control > .form-group {
+    padding-top: 15px;
     margin-bottom: 0px;
+    border-top: 1px solid #e5e5e5;
 }
 
 label.col-sm-2 {
