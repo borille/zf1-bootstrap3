@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'username' => 'Nome do Usuário',
+    'username' => 'Nome do UsuÃ¡rio',
     'password' => 'Senha',
     'search' => 'Buscar',
 	'subscribe' => 'Inscreva-se',
