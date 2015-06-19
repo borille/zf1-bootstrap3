@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <navmenu>
     <cadastro uri="#">
         <label>Cadastro</label>
         <pages>
             <user module="default" controller="user" action="index">
-                <label>Usuário</label>
+                <label>UsuÃ¡rio</label>
             </user>
         </pages>
     </cadastro>
@@ -12,6 +12,6 @@
         <label>Processamento</label>
     </processamento>
     <relatorio uri="#">
-        <label>Relatórios</label>
+        <label>RelatÃ³rios</label>
     </relatorio>
 </navmenu>
